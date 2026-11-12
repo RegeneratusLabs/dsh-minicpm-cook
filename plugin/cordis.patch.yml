@@ -1,0 +1,12 @@
+# Bundle patch for dsh-minicpm-cook.
+#
+# One Host row carries the bundle. It registers seven tools and four skills on
+# activation; there is no Client half, because everything here is agent-facing
+# rather than a panel or page.
+#
+# `inject` is declared in index.js (tools, skills). The Doctor tool additionally
+# degrades on its own when no shell executor is mounted, so this bundle stays
+# usable in a profile without a shell tool.
+- insert:
+    - id: minicpm-cook
+      name: '@local/dsh-minicpm-cook'

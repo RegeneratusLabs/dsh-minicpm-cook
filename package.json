@@ -1,0 +1,18 @@
+{
+  "name": "minicpm-cook",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Compiled technical record of the OpenBMB MiniCPM family, plus the dsh-minicpm-cook harness bundle.",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test plugin/test/*.test.mjs",
+    "validate": "node scripts/validate-data.mjs",
+    "sync": "node scripts/sync-data.mjs",
+    "render": "node scripts/render-catalog.mjs",
+    "drift": "node scripts/check-upstream.mjs",
+    "check": "npm run validate && npm run test"
+  }
+}

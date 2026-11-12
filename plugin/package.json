@@ -1,0 +1,33 @@
+{
+  "name": "@local/dsh-minicpm-cook",
+  "version": "1.0.0",
+  "private": true,
+  "description": "The OpenBMB MiniCPM cookbook as a harness bundle: choose a model, plan a fine-tune, validate data, check the host, serve, and publish — with the licences and version floors attached.",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "lib",
+    "data",
+    "skills",
+    "locale",
+    "docs",
+    "cordis.patch.yml",
+    "icon.svg",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "repo": "OpenBMB/MiniCPM",
+  "defaultBranch": "main",
+  "pushedAt": "2026-11-09T07:36:54Z",
+  "skills": [
+    "minicpm5-deploy",
+    "minicpm5-deploy-arclight",
+    "minicpm5-deploy-litert",
+    "minicpm5-deploy-llama-cpp",
+    "minicpm5-deploy-lmstudio",
+    "minicpm5-deploy-mlx",
+    "minicpm5-deploy-ollama",
+    "minicpm5-deploy-sglang",
+    "minicpm5-deploy-transformers",
+    "minicpm5-deploy-vllm",
+    "minicpm5-deploy-vllm-ascend",
+    "minicpm5-finetune",
+    "minicpm5-finetune-gguf-lora",
+    "minicpm5-finetune-llamafactory",
+    "minicpm5-finetune-ms-swift",
+    "minicpm5-finetune-trl",
+    "minicpm5-finetune-unsloth",
+    "minicpm5-finetune-xtuner"
+  ],
+  "deployment": [
+    "arclight.md",
+    "litert.md",
+    "llama_cpp.md",
+    "lmstudio.md",
+    "mlx.md",
+    "ollama.md",
+    "sglang.md",
+    "transformers.md",
+    "vllm.md",
+    "vllm_ascend.md"
+  ],
+  "finetune": [
+    "llamafactory.md",
+    "ms_swift.md",
+    "trl.md",
+    "unsloth.md",
+    "xtuner.md"
+  ]
+}

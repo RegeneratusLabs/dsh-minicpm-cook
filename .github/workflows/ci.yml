@@ -1,0 +1,48 @@
+name: checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node: ['20', '22', '24']
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Validate the model catalog
+        run: node scripts/validate-data.mjs
+
+      - name: Run the test suite
+        run: node --test plugin/test/*.test.mjs
+
+      - name: Check the rendered catalog is up to date
+        run: |
+          node scripts/render-catalog.mjs
+          git diff --exit-code docs/models.md \
+            || (echo "::error::docs/models.md is stale - run 'npm run render' and commit" && exit 1)
+
+  python-recipe:
+    # The generated TRL recipe must at least parse. Torch is not installed, so
+    # this is a syntax gate, not a training test.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Compile a generated recipe
+        run: node --test plugin/test/tools.test.mjs

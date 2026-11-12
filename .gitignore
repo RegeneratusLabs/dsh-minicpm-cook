@@ -1,0 +1,19 @@
+# Dependencies (none are required to run the tools, but keep installs out of git)
+node_modules/
+
+# Harness / editor noise
+.DS_Store
+*.log
+.vscode/
+.idea/
+
+# Training and model artefacts people generate while using the cookbook
+runs/
+*.safetensors
+*.gguf
+merged/
+adapter_final/
+
+# Python bytecode from generated recipes
+__pycache__/
+*.pyc

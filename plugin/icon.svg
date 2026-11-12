@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="MiniCPM cook">
+  <rect width="64" height="64" rx="14" fill="#0E2B29"/>
+  <g fill="none" stroke="#5FD3B4" stroke-width="2.6" stroke-linecap="round">
+    <path d="M21 25.5c0-5 5-6 5-11"/>
+    <path d="M30 25.5c0-5 5-6 5-11"/>
+    <path d="M39 25.5c0-5 5-6 5-11"/>
+  </g>
+  <path d="M13 32h38a19 19 0 0 1-38 0z" fill="#F2F7F5"/>
+  <rect x="10.5" y="29.4" width="43" height="3.6" rx="1.8" fill="#5FD3B4"/>
+  <rect x="26.5" y="37.5" width="11" height="11" rx="2.6" fill="#0E2B29"/>
+  <rect x="29.6" y="40.6" width="4.8" height="4.8" rx="1.2" fill="#F2F7F5"/>
+</svg>
